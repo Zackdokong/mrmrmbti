@@ -140,6 +140,19 @@ function showResult() {
   </div>
   <button class="retry-btn" onclick="resetTest()">다시 검사하기</button>
 `;
+document.getElementById("resultCard").innerHTML = `
+  <div class="result-title">${r.name}</div>
+  <div class="result-desc">${r.desc}</div>
+  <div class="result-tags">
+    ${r.tag.map((t) => `<span class="tag">${t}</span>`).join("")}
+  </div>
+
+  <div class="result-actions">
+    <button class="download-btn" onclick="downloadResult()">이미지 저장</button>
+    <button class="retry-btn" onclick="resetTest()">다시 검사하기</button>
+  </div>
+`;
+
 }
 
 function resetTest() {
@@ -148,4 +161,18 @@ function resetTest() {
   document.getElementById("result").classList.add("hidden");
   progressBar.style.width = "0%";
   showQuestion();
+}
+
+function downloadResult() {
+  const card = document.getElementById("resultCard");
+
+  html2canvas(card, {
+    scale: 2,
+    backgroundColor: "#111",
+  }).then((canvas) => {
+    const link = document.createElement("a");
+    link.download = "lettuce-result.png";
+    link.href = canvas.toDataURL("image/png");
+    link.click();
+  });
 }
