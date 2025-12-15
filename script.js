@@ -126,6 +126,8 @@ function showResult() {
   updateProgress();
   area.innerHTML = "";
 
+  document.querySelector(".progress").style.display = "none";
+
   const type =
     (score.E >= score.I ? "E" : "I") +
     (score.F >= score.T ? "F" : "T") +
@@ -160,6 +162,7 @@ function resetTest() {
   index = 0;
   score = { E: 0, I: 0, F: 0, T: 0, J: 0, P: 0 };
   document.getElementById("result").classList.add("hidden");
+  document.querySelector(".progress").style.display = "block";
   progressBar.style.width = "0%";
   showQuestion();
 }
