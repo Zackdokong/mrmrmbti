@@ -1,216 +1,252 @@
 /* ===== Reset & Base ===== */
 * {
-  box-sizing: border-box;
-  font-family: Pretendard, -apple-system, BlinkMacSystemFont, sans-serif;
-}
-
-html, body {
-  width: 100%;
-  height: 100%;
-}
-
-body {
-  margin: 0;
-  background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
-  color: #fff;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-/* ===== Layout ===== */
-.container {
-  width: 92%;
-  max-width: 720px;
-  background: #111;
-  padding: 44px 40px 48px;
-  border-radius: 22px;
-  box-shadow: 0 24px 70px rgba(0, 0, 0, 0.65);
-  overflow: hidden;
-}
-
-/* ===== Header ===== */
-h1 {
-  text-align: center;
-  margin: 0 0 32px;
-  font-size: 30px;
-  letter-spacing: -0.02em;
-}
-
-/* ===== Progress ===== */
-.progress {
-  width: 100%;
-  height: 10px;
-  background: #1f1f1f;
-  border-radius: 999px;
-  overflow: hidden;
-  margin-bottom: 32px;
-}
-
-.progress-bar {
-  height: 100%;
-  width: 0%;
-  background: linear-gradient(90deg, #2ecc71, #6aff9d);
-  transition: width 0.35s ease;
-}
-
-/* ===== Question ===== */
-.question {
-  font-size: 22px;
-  line-height: 1.45;
-  margin-bottom: 30px;
-  text-align: center;
-}
-
-/* ===== Buttons ===== */
-.buttons {
-  display: flex;
-  gap: 18px;
-}
-
-.btn {
-  flex: 1;
-  height: 72px;
-  font-size: 26px;
-  border-radius: 18px;
-  border: none;
-  cursor: pointer;
-  background: #1c1c1c;
-  color: #fff;
-  transition: all 0.2s ease;
-}
-
-.btn:hover {
-  background: #2ecc71;
-  color: #000;
-  box-shadow: 0 10px 24px rgba(46, 204, 113, 0.35);
-}
-
-.btn:active {
-  transform: scale(0.95);
-}
-
-/* ===== Result ===== */
-.result {
-  text-align: center;
-}
-
-.hidden {
-  display: none;
-}
-
-/* ===== Result Card ===== */
-.card {
-  width: 100%;
-  background: radial-gradient(
-    120% 120% at 50% 0%,
-    #1f1f1f 0%,
-    #151515 60%,
-    #111 100%
-  );
-  padding: 36px 28px 40px;
-  border-radius: 24px;
-  box-shadow:
-    inset 0 0 0 2px rgba(46, 204, 113, 0.9),
-    0 18px 50px rgba(0, 0, 0, 0.55);
-}
-
-/* ===== Result Title ===== */
-.result-title {
-  font-size: 36px;
-  font-weight: 900;
-  margin-bottom: 12px;
-  background: linear-gradient(90deg, #2ecc71, #9bffcb);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-}
-
-/* ===== Result Desc ===== */
-.result-desc {
-  font-size: 16px;
-  line-height: 1.6;
-  color: #cfcfcf;
-  margin-bottom: 24px;
-}
-
-/* ===== Tags ===== */
-.result-tags {
-  margin-bottom: 30px;
-}
-
-.tag {
-  display: inline-block;
-  margin: 6px;
-  padding: 7px 16px;
-  background: #2ecc71;
-  color: #000;
-  border-radius: 999px;
-  font-size: 14px;
-  font-weight: 700;
-}
-
-/* ===== Retry ===== */
-.retry-btn {
-  width: 100%;
-  padding: 16px;
-  border-radius: 14px;
-  border: 2px solid #2ecc71;
-  background: transparent;
-  color: #2ecc71;
-  font-size: 16px;
-  font-weight: 800;
-  cursor: pointer;
-  transition: all 0.2s ease;
-}
-
-.retry-btn:hover {
-  background: #2ecc71;
-  color: #000;
-}
-
-/* ===== Mobile Fix ===== */
-@media (max-width: 480px) {
-
+    box-sizing: border-box;
+    font-family: Pretendard, -apple-system, BlinkMacSystemFont, sans-serif;
+  }
+  
   body {
+    margin: 0;
+    background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
+    color: #fff;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
     align-items: center;
   }
-
+  
+  /* ===== Layout ===== */
   .container {
-    width: 94%;
-    padding: 24px 18px 28px;
-    border-radius: 18px;
+    width: 92%;
+    max-width: 720px;
+    background: #111;
+    padding: 44px 40px 48px;
+    border-radius: 22px;
+    box-shadow: 0 24px 70px rgba(0, 0, 0, 0.65);
   }
-
+  
+  /* ===== Header ===== */
   h1 {
-    font-size: 24px;
-    margin-bottom: 18px;
+    text-align: center;
+    margin: 0 0 36px;
+    font-size: 30px;
+    letter-spacing: -0.02em;
   }
-
+  
+  /* ===== Progress ===== */
+  .progress {
+    width: 100%;
+    height: 10px;
+    background: #1f1f1f;
+    border-radius: 999px;
+    overflow: hidden;
+    margin-bottom: 40px; /* 제목과 충분한 거리 */
+  }
+  
+  .progress-bar {
+    height: 100%;
+    width: 0%;
+    background: linear-gradient(90deg, #2ecc71, #6aff9d);
+    transition: width 0.35s ease;
+  }
+  
+  /* ===== Question Area ===== */
   .question {
-    font-size: 20px;
-    margin-bottom: 20px;
+    font-size: 22px;
+    line-height: 1.4;
+    margin-bottom: 34px;
+    text-align: center;
   }
-
+  
   .buttons {
-    gap: 12px;
+    display: flex;
+    gap: 20px;
   }
-
+  
+  /* ===== Buttons ===== */
   .btn {
-    height: 68px;
-    font-size: 24px;
-    border-radius: 14px;
+    flex: 1;
+    padding: 22px 0;
+    font-size: 26px;
+    border-radius: 18px;
+    border: none;
+    cursor: pointer;
+    background: #1c1c1c;
+    color: #fff;
+    transition: transform 0.15s ease, background 0.2s ease, box-shadow 0.2s ease;
   }
-
+  
+  .btn:hover {
+    background: #2ecc71;
+    color: #000;
+    box-shadow: 0 10px 24px rgba(46, 204, 113, 0.35);
+  }
+  
+  .btn:active {
+    transform: scale(0.94);
+  }
+  
+  /* ===== Slide Animation ===== */
+  .slide {
+    animation: slideIn 0.32s ease;
+  }
+  
+  @keyframes slideIn {
+    from {
+      opacity: 0;
+      transform: translateX(36px);
+    }
+    to {
+      opacity: 1;
+      transform: translateX(0);
+    }
+  }
+  
+  /* ===== Result ===== */
+  .result {
+    text-align: center;
+    animation: fadeUp 0.4s ease;
+  }
+  
+  @keyframes fadeUp {
+    from {
+      opacity: 0;
+      transform: translateY(18px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  .hidden {
+    display: none;
+  }
+  
+  /* ===== Result Card ===== */
   .card {
-    padding: 24px 18px;
-    border-radius: 16px;
+    background: radial-gradient(
+      120% 120% at 50% 0%,
+      #1f1f1f 0%,
+      #151515 60%,
+      #111 100%
+    );
+    padding: 36px 28px 40px;
+    border-radius: 24px;
+    box-shadow:
+      inset 0 0 0 2px rgba(46, 204, 113, 0.9),
+      0 18px 50px rgba(0, 0, 0, 0.55);
   }
-
+  
+  /* ===== Result Title (상추 이름 강조) ===== */
   .result-title {
-    font-size: 28px;
+    font-size: 36px;
+    font-weight: 900;
+    margin-bottom: 12px;
+    letter-spacing: -0.02em;
+    background: linear-gradient(90deg, #2ecc71, #9bffcb);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
   }
-
+  
+  /* ===== Result Description ===== */
   .result-desc {
-    font-size: 15px;
+    font-size: 16px;
+    line-height: 1.6;
+    color: #cfcfcf;
+    margin-bottom: 26px;
   }
-}
+  
+  /* ===== Tags ===== */
+  .result-tags {
+    margin-bottom: 34px;
+  }
+  
+  .tag {
+    display: inline-block;
+    margin: 6px;
+    padding: 7px 16px;
+    background: #2ecc71;
+    color: #000;
+    border-radius: 999px;
+    font-size: 14px;
+    font-weight: 700;
+  }
+  
+  /* ===== Retry Button ===== */
+  .retry-btn {
+    padding: 14px 28px;
+    border-radius: 999px;
+    border: 2px solid #2ecc71;
+    background: transparent;
+    color: #2ecc71;
+    font-size: 15px;
+    font-weight: 800;
+    cursor: pointer;
+    transition: all 0.22s ease;
+  }
+  
+  .retry-btn:hover {
+    background: #2ecc71;
+    color: #000;
+    transform: translateY(-2px);
+    box-shadow: 0 10px 26px rgba(46, 204, 113, 0.35);
+  }
+  
+  @media (max-width: 480px) {
+
+    .container {
+      padding: 28px 22px 32px;
+      border-radius: 18px;
+    }
+  
+    h1 {
+      font-size: 24px;
+      margin-bottom: 22px;
+    }
+  
+    .question {
+      font-size: 18px;
+      line-height: 1.5;
+      margin-bottom: 22px;
+    }
+  
+    .progress {
+      margin-bottom: 26px;
+    }
+  
+    .buttons {
+      gap: 14px;
+    }
+  
+    .btn {
+      font-size: 18px;
+      padding: 18px 0;
+      border-radius: 14px;
+    }
+  
+    .card {
+      padding: 26px 20px 28px;
+      border-radius: 18px;
+    }
+  
+    .result-title {
+      font-size: 26px;
+    }
+  
+    .result-desc {
+      font-size: 15px;
+      line-height: 1.65;
+    }
+  
+    .tag {
+      font-size: 13px;
+      padding: 6px 12px;
+    }
+  
+    .retry-btn {
+      font-size: 15px;
+      padding: 14px;
+      border-radius: 12px;
+    }
+  }
+  
