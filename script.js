@@ -1,3 +1,5 @@
+window.scrollTo(0, 1);
+
 const questions = [
     { q: "사람이 많은 곳에 있으면 기운이 난다", yes: "E", no: "I" },
     { q: "혼자 조용히 쉬는 시간이 꼭 필요하다", yes: "I", no: "E" },
