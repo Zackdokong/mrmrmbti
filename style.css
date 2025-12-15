@@ -192,3 +192,75 @@
     box-shadow: 0 10px 26px rgba(46, 204, 113, 0.35);
   }
   
+
+  @media (max-width: 480px) {
+
+    body {
+      align-items: flex-start;
+    }
+  
+    .container {
+      width: 100%;
+      min-height: 100vh;
+      padding: 20px 16px;
+      border-radius: 0;
+      box-shadow: none;
+    }
+  
+    h1 {
+      font-size: 24px;
+      margin-bottom: 18px;
+    }
+  
+    .progress {
+      height: 10px;
+      margin-bottom: 20px;
+    }
+  
+    .question {
+      font-size: 20px;
+      line-height: 1.6;
+      margin-bottom: 20px;
+    }
+  
+    .buttons {
+      gap: 12px;
+    }
+  
+    .btn {
+      font-size: 26px;
+      padding: 22px 0;
+      border-radius: 14px;
+    }
+  
+    .card {
+      padding: 24px 18px;
+      border-radius: 14px;
+    }
+  
+    .result-title {
+      font-size: 28px;
+      font-weight: 900;
+      margin-bottom: 10px;
+      color: #2ecc71;
+    }
+  
+    .result-desc {
+      font-size: 16px;
+      line-height: 1.7;
+      margin-bottom: 14px;
+    }
+  
+    .tag {
+      font-size: 14px;
+      padding: 6px 14px;
+      margin: 4px;
+    }
+  
+    .retry-btn {
+      width: 100%;
+      font-size: 17px;
+      padding: 16px;
+      border-radius: 12px;
+    }
+  }  
